@@ -10,6 +10,17 @@ const Footer = () =>{
                 <a href="../Order_Online"><li>Order Online</li></a>
                 <a href="../Login"><li>Login</li></a>
             </ul>
+            <ul>
+                <p>Contact</p>
+                <li>Address</li>
+                <li>Phone Number</li>
+                <li>Email</li>
+            </ul>
+            <ul>
+                <p>Social Media</p>
+                <li>Facebook</li>
+                <li>Instagram</li>
+            </ul>
         </footer>
     );
 }
