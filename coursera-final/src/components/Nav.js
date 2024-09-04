@@ -2,12 +2,12 @@ const Nav = () =>{
     return(
         <nav>
             <ul>
-                <a href="../"><li>Home</li></a>
-                <a href="../About"><li>About</li></a>
-                <a href="../Menu"><li>Menu</li></a>
-                <a href="../Reservations"><li>Reservations</li></a>
-                <a href="../Order_Online"><li>Order Online</li></a>
-                <a href="../Login"><li>Login</li></a>
+                <a href="../"><li className="navListItem">Home</li></a>
+                <a href="../About"><li className="navListItem">About</li></a>
+                <a href="../Menu"><li className="navListItem">Menu</li></a>
+                <a href="../Reservations"><li className="navListItem">Reservations</li></a>
+                <a href="../Order_Online"><li className="navListItem">Order Online</li></a>
+                <a href="../Login"><li className="navListItem">Login</li></a>
             </ul>
         </nav>
     );

@@ -1,38 +1,64 @@
-.App {
-  text-align: center;
+body{
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header{
+  width: 33%;
+  display:inline-flex;
+  justify-content: flex-end;
+}
+.headerLogo{
+  height: 63px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+header, nav{
+  margin-top: 27px;
+}
+
+nav{
+  width:66%;
+  display: inline-flex;
+  vertical-align: top;
+}
+
+nav ul{
+  width: 100%;
+  display:inline-flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+}
+
+li{
+  list-style-type: none;
+  font-family: "Karla";
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+a, a::after{
+  text-decoration: none;
+  color: #495E57;
+}
+
+main{
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(4, 1fr)
+}
+
+@media screen and (max-width: 1117px){
+  .navListItem{
+    padding-top: 10px;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media screen and (max-width: 600px) {
+  .navListItem {
+    flex-direction: column;
+    align-items: center;
   }
 }
