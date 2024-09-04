@@ -14,7 +14,9 @@ header{
   max-width: 100%;
   flex-shrink: 1;
 }
+/*---------------------End of Header CSS----------------*/
 
+/*---------------------Start of Nav CSS----------------*/
 nav{
   margin-top: 27px;
 }
@@ -44,23 +46,69 @@ nav ul{
   font-weight: 600;
 }
 
-a, a::after{
+a{
   text-decoration: none;
   color: #495E57;
 }
 
+/*---------------------End of Navbar CSS----------------*/
+
+/*---------------------Start of Main CSS----------------*/
 main{
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: repeat(4, 1fr)
 }
 
+/*---------------------Start of the About section CSS----------------*/
+.aboutLittleLemon{
+  background-color: #495E57;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3,auto);
+}
 
+#title h1, #title h3{
+  font-family: "Markazi Text";
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#title h1{
+  font-size: 64px;
+  color: #F4CE14;
+}
+
+#title h3, #description{
+  color: white;
+}
+
+#description{
+  font-family: "Karla";
+}
+
+#imgContainer{
+  grid-column-start: 2;
+  grid-row: 1/4;;
+}
+#restaurantFoodIMG{
+  height: 410px;
+  width: 372px;
+  border-radius: 16px;
+}
+/*---------------------End of the About section CSS----------------*/
+
+/*---------------------Start of the Weekly specials section CSS----------------*/
+
+/*---------------------End of the Weekly specials section CSS----------------*/
+/*---------------------End of Main CSS----------------*/
+
+/*---------------------Start of the Footer CSS----------------*/
 footer{
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 100%;
-  justify-items: end;
+  justify-items: center;
   padding-top: 50px;
 }
 
@@ -81,6 +129,8 @@ footer{
 .footerLogo{
   height:247px;
 }
+
+/*---------------------Start of media queries for phone CSS----------------*/
 
 @media screen and (max-width: 1117px){
   .navListItem{
