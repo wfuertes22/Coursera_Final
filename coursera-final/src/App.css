@@ -6,13 +6,16 @@ body{
 header{
   width: 33%;
   display:inline-flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  margin-top: 21px;
 }
 .headerLogo{
   height: 63px;
+  max-width: 100%;
+  flex-shrink: 1;
 }
 
-header, nav{
+nav{
   margin-top: 27px;
 }
 
@@ -20,6 +23,7 @@ nav{
   width:66%;
   display: inline-flex;
   vertical-align: top;
+  flex-shrink: 2;
 }
 
 nav ul{
@@ -31,7 +35,7 @@ nav ul{
 
 }
 
-li{
+.navListItem{
   list-style-type: none;
   font-family: "Karla";
   padding-left: 10px;
@@ -51,6 +55,33 @@ main{
   grid-template-rows: repeat(4, 1fr)
 }
 
+
+footer{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 100%;
+  justify-items: end;
+  padding-top: 50px;
+}
+
+.footerListTitle{
+  font-size: 20px;
+  font-weight: 800;
+  color: #495E57;
+}
+
+.footerListItem{
+  list-style-type: none;
+  font-family: "Karla";
+  font-size: 20px;
+  font-weight: 600;
+  color: #333333;
+}
+
+.footerLogo{
+  height:247px;
+}
+
 @media screen and (max-width: 1117px){
   .navListItem{
     padding-top: 10px;
@@ -60,5 +91,14 @@ main{
   .navListItem {
     flex-direction: column;
     align-items: center;
+  }
+  footer{
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+    justify-items: center;
+  }
+  .footerList{
+    text-align: center;
+    padding-left: 0;
   }
 }
