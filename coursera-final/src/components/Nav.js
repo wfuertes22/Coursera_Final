@@ -1,6 +1,6 @@
 const Nav = () =>{
     return(
-        <nav>
+        <nav className="container">
             <ul>
                 <a href="../"><li className="navListItem">Home</li></a>
                 <a href="../About"><li className="navListItem">About</li></a>

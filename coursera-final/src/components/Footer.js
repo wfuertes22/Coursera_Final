@@ -1,7 +1,7 @@
 import footerLogo from "../images/Little_Lemon_Tab_Icon_Yellow.png"
 const Footer = () =>{
     return(
-        <footer>
+        <footer className="container">
             <img src={footerLogo} alt="Large Little Lemon logo" className="footerLogo"></img>
             <ul className="footerList">
                 <p className="footerListTitle">Helpful Links</p>
