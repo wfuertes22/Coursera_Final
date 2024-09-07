@@ -148,11 +148,15 @@ button{
 }
 
 #productCardList{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: inline-grid;
+  grid-template-columns: repeat(3, auto);
   grid-template-rows: 1fr;
   margin-top: 35px;
-  justify-content: space-between;
+  column-gap: 30px;
+}
+
+.productCard{
+  background-color: #EDEFEE;
 }
 
 .foodCardIMG{

@@ -26,12 +26,21 @@ const Main = () =>{
                 <section id="productCardList">
                     <article className="productCard">
                         <img className="foodCardIMG" id="greekSaladIMG" src={greekSalad} alt="Greek Salad"></img>
+                        <p className="cardTitle">
+                            Greek Salad
+                        </p>
                     </article>
                     <article className="productCard">
                         <img className="foodCardIMG" id="bruchettaIMG"src={bruchetta} alt="Bruchetta"></img>
+                        <p className="cardTitle">
+                            Bruchetta
+                        </p>
                     </article>
                     <article className="productCard">
-                    <img className="foodCardIMG" id="lemonDessertIMG" src={lemonDessert} alt="Lemon Dessert"></img>
+                        <img className="foodCardIMG" id="lemonDessertIMG" src={lemonDessert} alt="Lemon Dessert"></img>
+                        <p className="cardTitle">
+                            Lemon Dessert
+                        </p>
                     </article>
                 </section>
             </section>
