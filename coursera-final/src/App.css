@@ -6,12 +6,12 @@
 
 
 .container{
-  padding-left: 15%;
-  padding-right: 15%;
+  padding-left: 25%;
+  padding-right: 25%;
 }
 
 header{
-  width:23%;
+  width:13%;
   display:inline-flex;
   margin-top: 21px;
   padding-right: 0 !important;
@@ -25,7 +25,7 @@ header{
 
 /*---------------------Start of Nav CSS----------------*/
 nav{
-  width: 47%;
+  width: 37%;
   display: inline-flex;
   vertical-align: top;
   margin-top: 27px;
@@ -36,9 +36,9 @@ nav ul{
   width: 100%;
   display:inline-flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: wrap;
-
+  padding-inline-start: 20px;
 }
 
 .navListItem{
