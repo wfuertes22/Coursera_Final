@@ -162,7 +162,7 @@ button{
 }
 
 .slider{
-  /* overflow-x: scroll; */
+  overflow-x: scroll;
 }
 
 .productCard{
