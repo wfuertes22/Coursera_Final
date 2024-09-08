@@ -26,7 +26,6 @@ const Main = () =>{
                 </div>
                 <div className="slider">
                     <section id="productCardList">
-                    
                         <article className="productCard">
                             <img className="foodCardIMG" id="greekSaladIMG" src={greekSalad} alt="Greek Salad"></img>
                             <div className="cardDescriptionContainer">
