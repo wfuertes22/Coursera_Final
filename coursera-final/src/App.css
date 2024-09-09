@@ -155,7 +155,7 @@ button{
 
 #productCardList{
   display: inline-grid;
-  grid-template-columns: repeat(3, min-content);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr;
   margin-top: 35px;
   column-gap: 30px;
@@ -172,9 +172,14 @@ button{
 }
 
 .foodCardIMG{
-  max-width:265px;
+  max-width: 100%;
   min-height: 185px;
+  object-fit: cover;
 }
+.verticalScroll{
+  overflow-y: scroll;
+}
+
 .cardDescriptionContainer{
   display: inline-flex;
   flex-wrap: wrap;
@@ -189,6 +194,7 @@ button{
   font-family: "Markazi Text";
   font-weight: 600;
   font-size: 20px;
+  align-self: center;
 }
 .price{
   font-family: "Karla";
@@ -207,6 +213,7 @@ button{
 
 .cardDescriptionContainer a{
   vertical-align: bottom;
+  margin-top: 10px;
 }
 
 .deliveryIMG{
