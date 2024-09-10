@@ -3,6 +3,7 @@ import greekSalad from "../images/greek_salad.jpg"
 import bruchetta from "../images/Bruschetta.jpg"
 import lemonDessert from "../images/lemon_dessert.jpg"
 import deliveryIcon from "../images/delivery_Icon.png"
+import profileIMG from "../images/profile.png"
 
 const Main = () =>{
     return(
@@ -81,14 +82,46 @@ const Main = () =>{
                 </div>
             </section>
             {/*--------------------------------------------*/}
-            <section className="testimonials">
-                <div className="container">
-                </div>
+            <section className="testimonials container">
+                <h2 id="testimonialTitle">Testimonials</h2>
+                <section className="testimonialGrid">
+                    <article className="testimonialReview">
+                        <div className="reviewContainer">
+                            <p className="rating">Rating</p>
+                            <img className="profileIMG" src={profileIMG} alt="profile icon"></img>
+                            <p className="userName">Name</p>
+                            <blockquote>Review Text</blockquote>
+                        </div>
+                    </article>
+                    <article className="testimonialReview">
+                        <div className="reviewContainer">
+                            <p className="rating">Rating</p>
+                            <img className="profileIMG" src={profileIMG} alt="profile icon"></img>
+                            <p className="userName">Name</p>
+                            <blockquote>Review Text</blockquote>
+                        </div>
+                    </article>
+                    <article className="testimonialReview">
+                        <div className="reviewContainer">
+                            <p className="rating">Rating</p>
+                            <img className="profileIMG" src={profileIMG} alt="profile icon"></img>
+                            <p className="userName">Name</p>
+                            <blockquote>Review Text</blockquote>
+                        </div>
+                    </article>
+                    <article className="testimonialReview">
+                        <div className="reviewContainer">
+                            <p className="rating">Rating</p>
+                            <img className="profileIMG" src={profileIMG} alt="profile icon"></img>
+                            <p className="userName">Name</p>
+                            <blockquote>Review TextReview TextReview TextReview TextReview TextReview TextReview TextReview TextReview Text</blockquote>
+                        </div>
+                    </article>
+                </section>
             </section>
             {/*--------------------------------------------*/}
-            <section className="aboutOwners">
-                <div className="container">
-                </div>
+            <section className="aboutOwners container">
+
             </section>
         </main>
     );

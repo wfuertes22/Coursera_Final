@@ -4,6 +4,10 @@
   --roundedCorners: 
 }
 
+.verticalScroll::-webkit-scrollbar {
+  display: none;
+}
+
 
 .container{
   padding-left: 30%;
@@ -146,9 +150,6 @@ button{
   margin-top: 50px;
   align-items: center;
   justify-content: space-between;
-}
-
-#specialsHeader{
   font-size: 24px;
   font-family: "Markazi Text";
 }
@@ -159,6 +160,7 @@ button{
   grid-template-rows: 1fr;
   margin-top: 35px;
   column-gap: 30px;
+  margin-bottom: 60px;
 }
 
 .slider{
@@ -169,6 +171,7 @@ button{
   background-color: #EDEFEE;
   display:flex;
   flex-direction: column;
+  min-width: 200px;
 }
 
 .foodCardIMG{
@@ -177,7 +180,7 @@ button{
   object-fit: cover;
 }
 .verticalScroll{
-  overflow-y: scroll;
+  overflow-y: scroll ;
 }
 
 .cardDescriptionContainer{
@@ -195,13 +198,14 @@ button{
   font-weight: 600;
   font-size: 20px;
   align-self: center;
+  max-width: 70%;
 }
 .price{
   font-family: "Karla";
   font-weight: bold;
   align-self: center;
   color: #EE9972;
-  justify-self: end;
+  align-self: center;
 }
 
 .productDescription{
@@ -224,6 +228,67 @@ button{
 }
 
 /*---------------------End of the Weekly specials section CSS----------------*/
+
+/*---------------------Start of the Testimonials section CSS-----------------*/
+.testimonials{
+  background-color: var(--brandGreen);
+}
+#testimonialTitle{
+  font-family: "Markazi Text";
+  font-size: 36px;
+  font-weight: 500;
+  color:white;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.testimonialGrid{
+  display: grid;
+  grid-template-columns: repeat(4, 200px);
+  grid-template-rows: 1fr;
+  margin-top: 35px;
+  column-gap: 30px;
+  margin-bottom: 60px;
+}
+
+.reviewContainer{
+  display: inline-flex;
+  flex-wrap: wrap;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  height: 100%;
+}
+
+.testimonialReview{
+  background-color: white;
+}
+
+
+.rating, .userName{
+  font-family: "Karla";
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.rating{
+  width: 100%;
+}
+
+.profileIMG{
+  width: 47px;
+  height: 47px;
+}
+
+.userName{
+  padding-left: 7px;
+}
+
+blockquote{
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+}
 /*---------------------End of Main CSS----------------*/
 
 /*---------------------Start of the Footer CSS----------------*/
@@ -289,6 +354,8 @@ footer{
   #title h1{
     font-size: 54px;
   }
+
+
   footer{
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, auto);
