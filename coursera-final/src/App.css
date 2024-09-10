@@ -164,7 +164,7 @@ button{
 }
 
 .slider{
-  overflow-x: auto;
+  overflow-x: scroll;
 }
 
 .productCard{
@@ -355,6 +355,12 @@ footer{
     font-size: 54px;
   }
 
+  .testimonialGrid{
+    display: grid;
+    grid-template-columns: repeat(2, 200px);
+    row-gap: 20px;
+    justify-content: center;
+  }
 
   footer{
     grid-template-columns: 1fr;
