@@ -84,41 +84,48 @@ const Main = () =>{
             {/*--------------------------------------------*/}
             <section className="testimonials container">
                 <h2 id="testimonialTitle">Testimonials</h2>
-                <section className="testimonialGrid">
-                    
-                    <article className="testimonialReview">
-                        <div className="reviewContainer">
-                            <p className="rating">Rating</p>
-                            <img className="profileIMG" src={profileIMG} alt="profile icon"></img>
-                            <p className="userName">Name</p>
-                            <blockquote>Review Text</blockquote>
-                        </div>
-                    </article>
-                    <article className="testimonialReview">
-                        <div className="reviewContainer">
-                            <p className="rating">Rating</p>
-                            <img className="profileIMG" src={profileIMG} alt="profile icon"></img>
-                            <p className="userName">Name</p>
-                            <blockquote>Review Text</blockquote>
-                        </div>
-                    </article>
-                    <article className="testimonialReview">
-                        <div className="reviewContainer">
-                            <p className="rating">Rating</p>
-                            <img className="profileIMG" src={profileIMG} alt="profile icon"></img>
-                            <p className="userName">Name</p>
-                            <blockquote>Review Text</blockquote>
-                        </div>
-                    </article>
-                    <article className="testimonialReview">
-                        <div className="reviewContainer">
-                            <p className="rating">Rating</p>
-                            <img className="profileIMG" src={profileIMG} alt="profile icon"></img>
-                            <p className="userName">Name</p>
-                            <blockquote>Review TextReview TextReview TextReview TextReview TextReview TextReview TextReview TextReview Text</blockquote>
-                        </div>
-                    </article>
-                </section>
+                <div className="slider">
+                    <section className="testimonialGrid">
+                        <article className="testimonialReview">
+                            <div className="reviewContainer">
+                                <p className="rating">Rating</p>
+                                <img className="profileIMG" src={profileIMG} alt="profile icon"></img>
+                                <p className="userName">Liam Foster</p>
+                                <div className="visibleVerticalScroll">
+                                    <q><i>Little Lemon is a true Mediterranean treasure that has quickly become a favorite spot for foodies seeking bold, fresh flavors and a welcoming atmosphere.</i></q>
+                                </div>                        </div>
+                        </article>
+                        <article className="testimonialReview">
+                            <div className="reviewContainer">
+                                <p className="rating">Rating</p>
+                                <img className="profileIMG" src={profileIMG} alt="profile icon"></img>
+                                <p className="userName">Emily Carter</p>
+                                <div className="visibleVerticalScroll">
+                                    <q><i>Little Lemon is a delightful Mediterranean restaurant that strikes a perfect balance between authenticity and comfort. Whether you’re a fan of Mediterranean cuisine or a first-timer, this place has something special to offer.</i></q>
+                                </div>                        </div>
+                        </article>
+                        <article className="testimonialReview">
+                            <div className="reviewContainer">
+                                <p className="rating">Rating</p>
+                                <img className="profileIMG" src={profileIMG} alt="profile icon"></img>
+                                <p className="userName">Jacob Martinez</p>
+                                <div className="visibleVerticalScroll">
+                                    <q><i>If you’re craving a Mediterranean escape, Little Lemon delivers. The combination of fresh, flavorful food, great service, and a relaxed ambiance makes it a standout. It’s a place that I’ll gladly return to, and I can’t wait to explore more of their menu.</i></q>
+                                </div>
+                            </div>
+                        </article>
+                        <article className="testimonialReview">
+                            <div className="reviewContainer">
+                                <p className="rating">Rating</p>
+                                <img className="profileIMG" src={profileIMG} alt="profile icon"></img>
+                                <p className="userName">Sophia Bennett</p>
+                                <div className="visibleVerticalScroll">
+                                    <q><i>Little Lemon is a hidden gem for lovers of Mediterranean cuisine! From the moment I stepped inside, I was greeted with a cozy and welcoming atmosphere that instantly transported me to the sun-drenched shores of the Mediterranean.</i></q>
+                                </div>
+                            </div>
+                        </article>
+                    </section>
+                </div>
             </section>
             {/*--------------------------------------------*/}
             <section className="aboutOwners container">
