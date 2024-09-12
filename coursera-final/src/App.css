@@ -342,9 +342,9 @@ q{
   object-fit: cover;
   transform: scaleX(-1);
 }
-/*-------------------- End of About onwers CSS --------------*/
+/*----------------- End of About onwers CSS --------------*/
 
-/*---------------------End of Main CSS----------------*/
+/*---------------------End of Main CSS-------------------------- */
 
 /*---------------------Start of the Footer CSS----------------*/
 footer{
@@ -419,10 +419,33 @@ footer{
     justify-content: center;
   }
 
+  .aboutOwners{
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2,1fr);
+  }
+
+  #darkTitle{
+    margin-bottom: 30px;
+  }
+
+  #descriptionOfOwners{
+    box-sizing: border-box;
+    padding-right: 0;
+  }
+
+  #ownersIMG{
+    margin-top: 0;
+  }
+
+  #frontIMG{
+    left: 46%;
+  }
+
   footer{
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, auto);
     justify-items: center;
+    margin-top: 75px;
   }
   .footerList{
     text-align: center;
