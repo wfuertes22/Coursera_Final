@@ -4,6 +4,8 @@ import bruchetta from "../images/Bruschetta.jpg"
 import lemonDessert from "../images/lemon_dessert.jpg"
 import deliveryIcon from "../images/delivery_Icon.png"
 import profileIMG from "../images/profile.png"
+import frontIMG from "../images/Mario_and_Adrian_A.jpg"
+import backIMG from "../images/Mario_and_Adrian_b.jpg"
 
 const Main = () =>{
     return(
@@ -129,7 +131,17 @@ const Main = () =>{
             </section>
             {/*--------------------------------------------*/}
             <section className="aboutOwners container">
-
+                <section id="darkTitle">
+                    <h1>Little Lemon</h1>
+                    <h3>Chicago</h3>
+                    <p id="descriptionOfOwners">
+                    Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                    Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.                     </p>
+                </section>
+                <section id="ownersIMG">
+                    <img src={frontIMG} alt="Mario and Adrian" id="frontIMG"></img>
+                    <img src={backIMG} alt="Mario and Adrian" id="backIMG"></img>
+                </section>
             </section>
         </main>
     );
