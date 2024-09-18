@@ -1,4 +1,5 @@
 import images from "../images/images";
+import CallToAction from "./CallToAction";
 import { Routes, Route, Link } from 'react-router-dom';
 
 const Main = () =>{
@@ -19,17 +20,7 @@ const Main = () =>{
 
     return(
         <main>
-            <section className="aboutLittleLemon container">
-                <div id="title">
-                    <h1>Little Lemon</h1>
-                    <h3>Chicago</h3>
-                </div>
-                <p id="description">
-                    We are a family owned Mediterranean restaurant focused on traditional recipes served with a modern twist 
-                </p>
-                <button id="reserveButton">Reserve a Table</button>
-                <img src={images.restaurantIMG} alt="restaurant food" id="restaurantFoodIMG"></img>
-            </section>
+            <CallToAction />
             {/* -------------------------------------------- */}
             <section className="weeksSpecials container">
                 <div id="specialsHeader">
