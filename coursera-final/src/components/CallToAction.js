@@ -1,3 +1,5 @@
+import images from "../images/images";
+
 const CallToAction = () => {
     return (
         <section className="aboutLittleLemon container">
