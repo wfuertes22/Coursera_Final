@@ -13,7 +13,7 @@ const CallToAction = () => {
                 <button id="reserveButton">Reserve a Table</button>
                 <img src={images.restaurantIMG} alt="restaurant food" id="restaurantFoodIMG"></img>
             </section>
-    )
+    );
 }
 
 export default CallToAction;
