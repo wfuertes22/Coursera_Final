@@ -1,5 +1,7 @@
 import images from "../images/images";
 import CallToAction from "./CallToAction";
+import Specials from "./Specials";
+import CustomersSays from "./CustomersSay";
 import { Routes, Route, Link } from 'react-router-dom';
 
 const Main = () =>{
@@ -22,55 +24,9 @@ const Main = () =>{
         <main>
             <CallToAction />
             {/* -------------------------------------------- */}
-            <section className="weeksSpecials container">
-                <div id="specialsHeader">
-                    <h2 id="specialsTitle">This weeks specials</h2>
-                    <button id="onlineMenu">Online Menu</button>
-                </div>
-                <div className="slider">
-                    <section id="productCardList">
-                        {specials.map((special) => (
-                            <article className="productCard">
-                                <img className="foodCardIMG" src={special.cardIMG} alt={special.cardTitle}/>
-                                <div className="cardDescriptionContainer">
-                                    <p className="cardTitle">
-                                        {special.cardTitle}
-                                    </p>
-                                    <p className="price">
-                                        {special.price}
-                                    </p>
-                                    <div className="verticalScroll">
-                                        <p className="productDescription">
-                                            {special.description}
-                                        </p>
-                                    </div>
-                                    <a href="../Order_Online">Order a delivery <img className="deliveryIMG" src={images.deliveryIcon} alt="delovery icon"></img></a>
-                                </div>
-                            </article>
-                        ))};
-                    </section>
-                </div>
-            </section>
+            <Specials specials={specials} />
             {/*--------------------------------------------*/}
-            <section className="testimonials container">
-                <h2 id="testimonialTitle">Testimonials</h2>
-                <div className="slider">
-                    <section className="testimonialGrid">
-                        {reviews.map((review) => (
-                            <article className="testimonialReview">
-                                <div className="reviewContainer">
-                                    <p className="rating">Rating</p>
-                                    <img className="profileIMG" src={images.profileIMG} alt="profile icon"></img>
-                                    <p className="userName">{review.name}</p>
-                                    <div className="visibleVerticalScroll">
-                                        <q><i>{review.review}</i></q>
-                                    </div>
-                                </div>
-                            </article>
-                        ))};
-                    </section>
-                </div>
-            </section>
+            <CustomersSays reviews={reviews} />
             {/*--------------------------------------------*/}
             <section className="aboutOwners container">
                 <section id="darkTitle">
