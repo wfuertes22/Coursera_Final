@@ -7,7 +7,7 @@ const CustomersSays = ({reviews}) =>{
                 <div className="slider">
                     <section className="testimonialGrid">
                         {reviews.map((review) => (
-                            <article className="testimonialReview">
+                            <article className="testimonialReview" key={review.id}>
                                 <div className="reviewContainer">
                                     <p className="rating">Rating</p>
                                     <img className="profileIMG" src={images.profileIMG} alt="profile icon"></img>

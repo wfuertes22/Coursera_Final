@@ -3,6 +3,7 @@ import CallToAction from "./CallToAction";
 import Specials from "./Specials";
 import CustomersSays from "./CustomersSay";
 import Chicago from "./Chicago";
+import BookingPageCalendar from "./BookingPageCalendar";
 import { Routes, Route, Link } from 'react-router-dom';
 
 const Main = () =>{
@@ -30,6 +31,8 @@ const Main = () =>{
             <CustomersSays reviews={reviews} />
             {/*--------------------------------------------*/}
             <Chicago />
+            {/*---------------------------------------------*/}
+            <BookingPageCalendar />
         </main>
     );
 }

@@ -343,6 +343,23 @@ q{
 }
 /*----------------- End of About onwers CSS --------------*/
 
+/*----------------- Start of Booking Calendar CSS ----------------*/
+.calendar{
+  background-color: var(--brandGreen);
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+#reservationText{
+  color: white;
+  font-family: "Karla";
+  font-weight: 600;
+  width: 100%;
+  display: block;
+}
+
+
+
 /*---------------------End of Main CSS-------------------------- */
 
 /*---------------------Start of the Footer CSS----------------*/

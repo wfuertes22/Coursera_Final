@@ -10,7 +10,7 @@ const Specials = ({specials}) => {
                 <div className="slider">
                     <section id="productCardList">
                         {specials.map((special) => (
-                            <article className="productCard">
+                            <article className="productCard" key={special.id}>
                                 <img className="foodCardIMG" src={special.cardIMG} alt={special.cardTitle}/>
                                 <div className="cardDescriptionContainer">
                                     <p className="cardTitle">
