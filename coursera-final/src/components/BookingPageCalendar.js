@@ -1,25 +1,65 @@
 import { useState } from "react";
 
 const BookingPageCalendar = () =>{
-    
+    const [reservationDate, setReservationDate ] = useState('reservationDate');
+    const [numOfDiners, setNumOfDiners ] = useState('numOfDiners');
+    const [occasion, setOccasion ] = useState('occasion');
+    const [time, setTime ] = useState('time');
 
-    // const [occasion, setOccasion] = useState('Occasion');
+    const handleDateChange = (e) => {
+        if (e.target.value === "default"){
+            setReservationDate('reservationDate')
+        }
+        else{
+            setReservationDate('changedInputBox')
+        }
+    }
+
+    const handleNumOfDinersChange = (e) =>{
+        if (e.target.value === "default"){
+            setNumOfDiners('numOfDiners')
+        }
+        else{
+            setNumOfDiners('changedInputBox')
+        }
+    }
+
+    const handleOccasionChange = (e) =>{
+        if (e.target.value === "default"){
+            setOccasion('numOfDiners')
+        }
+        else{
+            setOccasion('changedInputBox')
+        }
+    }
+
+    const handleTimeChange = (e) =>{
+        if (e.target.value === "default"){
+            setTime('numOfDiners')
+        }
+        else{
+            setTime('changedInputBox')
+        }
+    }
 
 
-    // const handleChange = (e) => {
-
-    // }
 
     return(
         <section className="reservationContainer container">
             <section className="reservationOptions">
                 <section className="gridBox">
-                    <label htmlFor="reservationDate" id="reservationText">Date of Reservation</label>
-                    <input className="inputBox" type="date" id="reservationDate"/>
+                    <label htmlFor="indoor">Indoor<input type="radio" id="indoor" /></label>
                 </section>
                 <section className="gridBox">
-                    <label htmlFor="numOfDiners" id="numOfDiners">Number of Diners</label>
-                    <select className="inputBox" id="numOfDiners">
+                    <label htmlFor="outDoor">Outdoor<input type="radio" id="outdoor" /></label>
+                </section>
+                <section className="gridBox">
+                    <label htmlFor="reservationDate" id="reservationTextLabel">Date of Reservation</label>
+                    <input type="date" className={reservationDate} id="reservationDate" onChange={handleDateChange}/>
+                </section>
+                <section className="gridBox">
+                    <label htmlFor="numOfDiners" id="numOfDinersLabel">Number of Diners</label>
+                    <select className={numOfDiners} id="numOfDiners" onChange={handleNumOfDinersChange}>
                         <option value="default">No. of Diners</option>
                         <option value="1">1 Diner</option>
                         <option value="2">2 Diners</option>
@@ -34,17 +74,18 @@ const BookingPageCalendar = () =>{
                     </select>
                 </section>
                 <section className="gridBox">
-                    <label htmlFor="Occasion" id="Occasion">Occasion</label>
-                    <select className="inputBox" id="Occasion">
-                        <option value="Occasion">Occasion</option>
+                    <label htmlFor="occasion" id="occasionLabel">Occasion</label>
+                    <select className={occasion} id="occasion" onChange={handleOccasionChange}>
+                        <option value="default">Occasion</option>
                         <option value="Birthday">Birthday</option>
                         <option value="Engagement">Engagement</option>
                         <option value="Aniversary">Aniversary</option>
                     </select>
                 </section>
                 <section className="gridBox">
-                    <label htmlFor="Time" id="time">Time</label>
-                    <select className="inputBox">
+                    <label htmlFor="time" id="timeLabel">Time</label>
+                    <select className={time}  id="time" onChange={handleTimeChange}>
+                        <option value="default">Select Time</option>
                         <option value="5:00 PM">5:00 PM</option>
                         <option value="6:00 PM">6:00 PM</option>
                         <option value="7:00 PM">7:00 PM</option>
