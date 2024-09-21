@@ -346,13 +346,18 @@ q{
 /*----------------- Start of Booking Calendar CSS ----------------*/
 .reservationContainer{
   background-color: var(--brandGreen);
-  padding-top: 50px;
   padding-bottom: 50px;
+}
+
+#reservationTitle{
+  font-size: 48px;
+  color: var(--brandYellow);
+
 }
 
 .reservationOptions{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(2, minmax(220px, 1fr));
   grid-template-rows: min-content;
   column-gap: 50px;
   align-self: center;
@@ -372,6 +377,9 @@ q{
   display: block;
 }
 
+#indoor, #outdoor{
+  margin-left: 20px;
+}
 
 #reservationDate:focus, #reservationDate{
   outline: none;
@@ -447,6 +455,14 @@ footer{
     padding-top: 10px;
   }
 }
+
+@media screen and (max-width: 710px) {
+  .reservationOptions{
+    grid-template-columns: repeat(1, minmax(220px,1fr));
+    align-self: center;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .container{
     padding-left: 5%;

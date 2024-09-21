@@ -42,16 +42,15 @@ const BookingPageCalendar = () =>{
         }
     }
 
-
-
     return(
         <section className="reservationContainer container">
+            <h2 id="reservationTitle">Reservations</h2>
             <section className="reservationOptions">
                 <section className="gridBox">
-                    <label htmlFor="indoor">Indoor<input type="radio" id="indoor" /></label>
+                    <label htmlFor="indoor">Indoor<input type="radio" id="indoor" name="seating"/></label>
                 </section>
                 <section className="gridBox">
-                    <label htmlFor="outDoor">Outdoor<input type="radio" id="outdoor" /></label>
+                    <label htmlFor="outDoor">Outdoor<input type="radio" id="outdoor" name="seating"/></label>
                 </section>
                 <section className="gridBox">
                     <label htmlFor="reservationDate" id="reservationTextLabel">Date of Reservation</label>

@@ -1,10 +1,9 @@
-import images from "../images/images";
+import images from "../../images/images";
 import CallToAction from "./CallToAction";
 import Specials from "./Specials";
 import CustomersSays from "./CustomersSay";
 import Chicago from "./Chicago";
-import BookingPageCalendar from "./BookingPageCalendar";
-import { Routes, Route, Link } from 'react-router-dom';
+import BookingPageCalendar from "../Booking_Components/BookingPageCalendar";
 
 const Main = () =>{
 
@@ -31,8 +30,6 @@ const Main = () =>{
             <CustomersSays reviews={reviews} />
             {/*--------------------------------------------*/}
             <Chicago />
-            {/*---------------------------------------------*/}
-            <BookingPageCalendar />
         </main>
     );
 }
