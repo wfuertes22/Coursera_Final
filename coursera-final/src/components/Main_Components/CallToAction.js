@@ -1,6 +1,13 @@
 import images from "../../images/images";
+import { useNavigate } from "react-router-dom";
 
 const CallToAction = () => {
+    const navigate = useNavigate();
+
+    const goToReservations = () =>{
+        navigate('/reservations')
+    };
+
     return (
         <section className="aboutLittleLemon container">
                 <div id="title">
@@ -10,7 +17,7 @@ const CallToAction = () => {
                 <p id="description">
                     We are a family owned Mediterranean restaurant focused on traditional recipes served with a modern twist 
                 </p>
-                <button id="reserveButton">Reserve a Table</button>
+                <button onClick={goToReservations} id="reserveButton">Reserve a Table</button>
                 <img src={images.restaurantIMG} alt="restaurant food" id="restaurantFoodIMG"></img>
             </section>
     );

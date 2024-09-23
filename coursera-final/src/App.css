@@ -130,6 +130,7 @@ button{
   width: 214px;
   height: 46px;
   border: 0;
+  cursor: pointer;
 }
 
 #reserveButton{
