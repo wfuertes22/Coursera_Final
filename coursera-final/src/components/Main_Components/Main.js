@@ -3,7 +3,6 @@ import CallToAction from "./CallToAction";
 import Specials from "./Specials";
 import CustomersSays from "./CustomersSay";
 import Chicago from "./Chicago";
-import BookingPageCalendar from "../Booking_Components/BookingPageCalendar";
 
 const Main = () =>{
 

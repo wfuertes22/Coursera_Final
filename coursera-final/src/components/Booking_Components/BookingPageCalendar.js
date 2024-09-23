@@ -1,5 +1,5 @@
 import BookingOptions from "./BookingOptions";
-
+import BookingImages from "./BookingImages";
 
 const BookingPageCalendar = () =>{
     return(
@@ -8,6 +8,7 @@ const BookingPageCalendar = () =>{
                 <h2 id="reservationTitle">Reservations</h2>
                 <BookingOptions />
             </section>
+            <BookingImages />
         </>
 
     );

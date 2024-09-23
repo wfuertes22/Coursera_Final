@@ -6,6 +6,8 @@ import deliveryIcon from './delivery_Icon.png';
 import profileIMG from './profile.png';
 import frontIMG from './Mario_and_Adrian_A.jpg';
 import backIMG from './Mario_and_Adrian_b.jpg';
+import scenery from './restaurant.jpg';
+import chef from './restaurant_chef B.jpg'
 
 const images = {
     restaurantIMG,
@@ -16,6 +18,8 @@ const images = {
     profileIMG,
     frontIMG,
     backIMG,
+    scenery,
+    chef,
 };
 
 export default images;
