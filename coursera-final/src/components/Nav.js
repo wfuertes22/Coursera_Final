@@ -21,6 +21,7 @@ const Nav = () =>{
                         <Link to="/about">About</Link>
                     </li>
 
+                    {/*Try to use the poduct cards from the specials and call the list fullMenuList */}
                     <li className="navListItem">
                         <Link to="/menu">Menu</Link>
                     </li>
