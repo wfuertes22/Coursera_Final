@@ -6,6 +6,7 @@ TODO: Find out why the webpage does not work when Router is removed even though 
 import {BrowserRouter as Router, Routes, Link, Route } from "react-router-dom";
 import Main from "./Main_Components/Main";
 import Booking from "../Booking";
+import AboutPage from "../AboutPage";
 
 const Nav = () =>{
     return(
@@ -15,19 +16,32 @@ const Nav = () =>{
                     <li className="navListItem">
                         <Link to="/">Home</Link>
                     </li>
-                    <a href="../About"><li className="navListItem">About</li></a>
-                    <a href="../Menu"><li className="navListItem">Menu</li></a>
+
+                    <li className="navListItem">
+                        <Link to="/about">About</Link>
+                    </li>
+
+                    <li className="navListItem">
+                        <Link to="/menu">Menu</Link>
+                    </li>
+
                     <li className="navListItem">
                         <Link to="/reservations">Reservations</Link>
                      </li>
-                     <a href="../Order_Online"><li className="navListItem">Order Online</li></a>
-                    <a href="../Login"><li className="navListItem">Login</li></a>
+
+                     <li className="navListItem">
+                        <Link to="/order-online">Order Online</Link>
+                     </li>
+                    <li className="navListItem">
+                        <Link to="Login">Login</Link>
+                    </li>
                 </ul>
             </nav>
 
             <Routes>
                 <Route path="/" element={<Main />}/>
-                <Route path="/reservations/*" element={<Booking />}></Route>
+                <Route path="/about" element={<AboutPage />} />
+                <Route path="/reservations/*" element={<Booking />} />
             </Routes>
         </>
     );
