@@ -1,10 +1,10 @@
-import BookingPageCalendar from "./components/Booking_Components/BookingPageCalendar";
+import BookingOptions from "./components/Booking_Components/BookingOptions";
 
 
 function Booking() {
     return (
       <>
-        <BookingPageCalendar />
+        <BookingOptions />
       </>
     );
   }

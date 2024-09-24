@@ -5,7 +5,7 @@ const CallToAction = () => {
     const navigate = useNavigate();
 
     const goToReservations = () =>{
-        navigate('/reservations')
+        navigate('/reservations/*')
     };
 
     return (

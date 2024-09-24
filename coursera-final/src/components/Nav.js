@@ -27,7 +27,7 @@ const Nav = () =>{
 
             <Routes>
                 <Route path="/" element={<Main />}/>
-                <Route path="/reservations" element={<Booking />}></Route>
+                <Route path="/reservations/*" element={<Booking />}></Route>
             </Routes>
         </>
     );
