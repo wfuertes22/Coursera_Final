@@ -27,7 +27,7 @@ const Specials = ({specials}) => {
                                     <a href="../Order_Online">Order a delivery <img className="deliveryIMG" src={images.deliveryIcon} alt="delovery icon"></img></a>
                                 </div>
                             </article>
-                        ))};
+                        ))}
                     </section>
                 </div>
             </section>

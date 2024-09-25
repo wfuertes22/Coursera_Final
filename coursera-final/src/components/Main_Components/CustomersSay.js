@@ -17,7 +17,7 @@ const CustomersSays = ({reviews}) =>{
                                 </div>
                             </div>
                         </article>
-                    ))};
+                    ))}
                 </section>
             </div>
         </section>

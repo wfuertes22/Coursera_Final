@@ -7,7 +7,10 @@ import profileIMG from './profile.png';
 import frontIMG from './Mario_and_Adrian_A.jpg';
 import backIMG from './Mario_and_Adrian_b.jpg';
 import scenery from './restaurant.jpg';
-import chef from './restaurant_chef B.jpg'
+import chef from './restaurant_chef B.jpg';
+import mediterraneanBackdrop from "./mediterranean_backdrop.jpg";
+import marioAdrianB from "./Mario_and_Adrian_b.jpg";
+import marioAdrianA from "./Mario_and_Adrian_A.jpg";
 
 const images = {
     restaurantIMG,
@@ -20,6 +23,9 @@ const images = {
     backIMG,
     scenery,
     chef,
+    mediterraneanBackdrop,
+    marioAdrianB,
+    marioAdrianA,
 };
 
 export default images;

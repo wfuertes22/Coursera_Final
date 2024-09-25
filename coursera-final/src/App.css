@@ -445,7 +445,88 @@ q{
   justify-self: center;
 }
 
+/*---------------------Start of AboutSection------------------------*/
+section.aboutSection.container{
+  height:25vh;
+  padding-left: 0;
+  padding-right: 0;
+}
 
+#imageBackground{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-image: url(./images/mediterranean_backdrop.jpg);
+  background-size:cover;
+  background-position: center;
+  align-items: center;
+}
+
+#littleLemonSlogan{
+  display: inline-block;
+  margin: 0 auto;
+  text-align: center;
+  font-size: calc(3vw + 3vh);
+  color: #FFFACD;
+  text-shadow: #FC0 1px 0 10px;
+}
+
+.visionSection{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: min-content;
+  align-items: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.visionTitle, .ownerTitles{
+  font-size: 36px;
+  margin-top: 0;
+}
+
+#visionText{
+  font-family: "Karla";
+  font-weight: 600;
+  line-height: 1.5;
+  padding-right: 15px;
+}
+
+.mediterraneanFood{
+  height: 425px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+  border: thick solid var(--brandGreen)
+}
+
+{/*Need to fix shrinking of one side when screen shrinks*/}
+
+.ownersHeadshot{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, min-content);
+  justify-items: center;
+  margin-bottom: 25px;
+  column-gap: 10px;
+}
+
+.headshot{
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  object-position: 85%;
+}
+
+.ownerTitles{
+  text-align: center;
+  grid-column: 1/3;
+  margin-bottom: 10px;
+}
+
+
+/*----------------------End of AboutSeciton-----------------------*/
 
 /*---------------------End of Main CSS-------------------------- */
 
@@ -496,12 +577,21 @@ footer{
   }
 }
 
+@media screen and (max-width: 810px) {
+  .ownersHeadshot{
+    grid-template-rows: repeat(3, min-content);
+  }
+
+  #marioAdrianB{
+    grid-row-start: 3;
+  }
+}
+
 @media screen and (max-width: 770px) {
   footer{
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, auto);
     justify-items: center;
-    margin-top: 15px;
   }
   .footerList{
     text-align: center;

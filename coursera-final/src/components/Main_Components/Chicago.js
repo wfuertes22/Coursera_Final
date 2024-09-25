@@ -8,11 +8,11 @@ const Chicago = () =>{
                     <h3>Chicago</h3>
                     <p id="descriptionOfOwners">
                         Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
-                        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.                     
+                        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.
                     </p>
                 </section>
 
-                {/* // TODO: Fix css for images. Images too big making the screen scrollable  */}
+                {/* // TODO: Fix css for images. Images too big making the screen scrollable. Might need to use transform: translate to do movement instead of absolut positioning*/}
                 <section id="ownersIMG">
                     <img src={images.frontIMG} alt="Mario and Adrian" id="frontIMG"></img>
                     <img src={images.backIMG} alt="Mario and Adrian" id="backIMG"></img>
