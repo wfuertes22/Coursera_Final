@@ -12,7 +12,7 @@ const Specials = ({specials}) => {
                         {specials.map((special) => (
                             <article className="productCard" key={special.id}>
                                 <img className="foodCardIMG" src={special.cardIMG} alt={special.cardTitle}/>
-                                <div className="cardDescriptionContainer">
+                                <section className="cardDescriptionContainer">
                                     <p className="cardTitle">
                                         {special.cardTitle}
                                     </p>
@@ -25,7 +25,7 @@ const Specials = ({specials}) => {
                                         </p>
                                     </div>
                                     <a href="../Order_Online">Order a delivery <img className="deliveryIMG" src={images.deliveryIcon} alt="delovery icon"></img></a>
-                                </div>
+                                </section>
                             </article>
                         ))}
                     </section>

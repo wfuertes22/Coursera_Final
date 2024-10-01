@@ -11,6 +11,8 @@ import chef from './restaurant_chef B.jpg';
 import mediterraneanBackdrop from "./mediterranean_backdrop.jpg";
 import marioAdrianB from "./Mario_and_Adrian_b.jpg";
 import marioAdrianA from "./Mario_and_Adrian_A.jpg";
+import grilledFish from "./grilled_fish.jpg";
+import pastaAllaPuttanesca from "./Penne_Puttanesca.jpg"
 
 const images = {
     restaurantIMG,
@@ -26,6 +28,8 @@ const images = {
     mediterraneanBackdrop,
     marioAdrianB,
     marioAdrianA,
+    grilledFish,
+    pastaAllaPuttanesca
 };
 
 export default images;

@@ -5,8 +5,9 @@ TODO: Find out why the webpage does not work when Router is removed even though 
 
 import {BrowserRouter as Router, Routes, Link, Route } from "react-router-dom";
 import Main from "./Main_Components/Main";
-import Booking from "../Booking";
-import AboutPage from "../AboutPage";
+import Booking from "./Booking_Components/Booking";
+import AboutPage from "./About_Component/AboutPage";
+import MenuPage from "./Menu_Component/MenuPage";
 
 const Nav = () =>{
     return(
@@ -42,6 +43,7 @@ const Nav = () =>{
             <Routes>
                 <Route path="/" element={<Main />}/>
                 <Route path="/about" element={<AboutPage />} />
+                <Route path="/menu" element={<MenuPage />} />
                 <Route path="/reservations/*" element={<Booking />} />
             </Routes>
         </>

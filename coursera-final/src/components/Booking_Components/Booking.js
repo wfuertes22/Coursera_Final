@@ -1,5 +1,5 @@
-import BookingOptions from "./components/Booking_Components/BookingOptions";
-import BookingUserInfo from "./components/Booking_Components/BookingUserInfo";
+import BookingOptions from "./BookingOptions";
+import BookingUserInfo from "./BookingUserInfo";
 
 
 const userInfo = () => {

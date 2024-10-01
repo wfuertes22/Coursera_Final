@@ -1,7 +1,7 @@
 const BookingUserInfo = () => {
     return(
         <section className="container">
-            <h1>Work In progress</h1>
+            <h1>BookingUserInfo Work In progress</h1>
         </section>
     );
 }

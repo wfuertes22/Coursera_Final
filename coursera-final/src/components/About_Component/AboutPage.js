@@ -1,4 +1,4 @@
-import AboutSection from "./components/About_Component/AboutSection";
+import AboutSection from "./AboutSection";
 
 function AboutPage(){
     return(
