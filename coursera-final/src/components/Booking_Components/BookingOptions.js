@@ -1,5 +1,7 @@
 import { useState } from "react";
 import BookingImages from "./BookingImages";
+import {Link, Outlet} from "react-router-dom";
+
 
 
 const BookingOptions = () =>{
@@ -100,8 +102,10 @@ const BookingOptions = () =>{
                         </section>
                     </form>
                 </section>
-
                 <BookingImages />
+                {/*pass form data as props to display in the next subroute*/}
+                <Link to="user-info" id="goToUserInfoButton" className="container"><button id="nextButton">Next</button></Link>
+                <Outlet />
             </>
         );
 }

@@ -9,8 +9,6 @@ const BookingImages = () =>{
                     <img src={images.scenery} alt="outside the restaurant" className="bookingIMG"></img>
                     <img src={images.chef} alt="a chef seasoning a dish"  className="bookingIMG"></img>
                     <img src={images.restaurantIMG} alt="a plate of food"  className="bookingIMG"></img>
-                    <Link to="user-info" id="goToUserInfoButton"><button >Next</button></Link>
-                    <Outlet />
             </section>
         </>
     );

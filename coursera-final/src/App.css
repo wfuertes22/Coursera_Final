@@ -575,6 +575,10 @@ section.aboutSection.container{
   font-weight: 600;
 }
 
+#goToUserInfoButton{
+  display: flex;
+  justify-content: center;
+}
 
 /*----------------------End of MenuPage CSS-----------------------------*/
 
