@@ -8,6 +8,7 @@ import Main from "./Main_Components/Main";
 import Booking from "./Booking_Components/Booking";
 import AboutPage from "./About_Component/AboutPage";
 import MenuPage from "./Menu_Component/MenuPage";
+import BookingUserInfo from "./Booking_Components/BookingUserInfo";
 
 const Nav = () =>{
     return(
@@ -44,7 +45,9 @@ const Nav = () =>{
                 <Route path="/" element={<Main />}/>
                 <Route path="/about" element={<AboutPage />} />
                 <Route path="/menu" element={<MenuPage />} />
-                <Route path="/reservations/*" element={<Booking />} />
+                <Route path="/reservations" element={<Booking />}>
+                    <Route path="user-info" element={<BookingUserInfo />} />
+                </Route>
             </Routes>
         </>
     );
