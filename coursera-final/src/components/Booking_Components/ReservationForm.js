@@ -4,48 +4,24 @@ import {Link, Outlet} from "react-router-dom";
 
 
 
-const BookingOptions = () =>{
+const ReservationForm = () =>{
 
-    const [reservationDate, setReservationDate ] = useState('reservationDate');
-    const [numOfDiners, setNumOfDiners ] = useState('numOfDiners');
-    const [occasion, setOccasion ] = useState('occasion');
-    const [time, setTime ] = useState('time');
+    const [formInputState, setFormInputState ]= useState({
+        reservationDate: 'reservationDate',
+        numOfDiners: "numOfDiners",
+        occasion: "occasion",
+        time: "time"
+    })
 
-    const handleDateChange = (e) => {
+    const handleLayoutChange = (e) => {
         if (e.target.value === "default"){
-            setReservationDate('reservationDate')
+            setFormInputState('reservationDate')
         }
         else{
-            setReservationDate('changedInputBox')
+            setFormInputState('changedInputBox')
         }
     }
 
-    const handleNumOfDinersChange = (e) =>{
-        if (e.target.value === "default"){
-            setNumOfDiners('numOfDiners')
-        }
-        else{
-            setNumOfDiners('changedInputBox')
-        }
-    }
-
-    const handleOccasionChange = (e) =>{
-        if (e.target.value === "default"){
-            setOccasion('numOfDiners')
-        }
-        else{
-            setOccasion('changedInputBox')
-        }
-    }
-
-    const handleTimeChange = (e) =>{
-        if (e.target.value === "default"){
-            setTime('numOfDiners')
-        }
-        else{
-            setTime('changedInputBox')
-        }
-    }
         return(
             <>
                 <section className="reservationContainer container">
@@ -60,11 +36,11 @@ const BookingOptions = () =>{
                             </section>
                             <section className="gridBox">
                                 <label htmlFor="reservationDate" id="reservationTextLabel">Date of Reservation</label>
-                                <input type="date" className={reservationDate} id="reservationDate" onChange={handleDateChange}/>
+                                <input type="date" className={formInputState.reservationDate} id="reservationDate" onChange={handleLayoutChange}/>
                             </section>
                             <section className="gridBox">
                                 <label htmlFor="numOfDiners" id="numOfDinersLabel">Number of Diners</label>
-                                <select className={numOfDiners} id="numOfDiners" onChange={handleNumOfDinersChange}>
+                                <select className={formInputState.numOfDiners} id="numOfDiners" onChange={handleLayoutChange}>
                                     <option value="default">No. of Diners</option>
                                     <option value="1">1 Diner</option>
                                     <option value="2">2 Diners</option>
@@ -80,7 +56,7 @@ const BookingOptions = () =>{
                             </section>
                             <section className="gridBox">
                                 <label htmlFor="occasion" id="occasionLabel">Occasion</label>
-                                <select className={occasion} id="occasion" onChange={handleOccasionChange}>
+                                <select className={formInputState.occasion} id="occasion" onChange={handleLayoutChange}>
                                     <option value="default">Occasion</option>
                                     <option value="Birthday">Birthday</option>
                                     <option value="Engagement">Engagement</option>
@@ -89,7 +65,7 @@ const BookingOptions = () =>{
                             </section>
                             <section className="gridBox">
                                 <label htmlFor="time" id="timeLabel">Time</label>
-                                <select className={time}  id="time" onChange={handleTimeChange}>
+                                <select className={formInputState.time}  id="time" onChange={handleLayoutChange}>
                                     <option value="default">Select Time</option>
                                     <option value="5:00 PM">5:00 PM</option>
                                     <option value="6:00 PM">6:00 PM</option>
@@ -102,6 +78,7 @@ const BookingOptions = () =>{
                         </section>
                     </form>
                 </section>
+
                 <BookingImages />
                 {/*pass form data as props to display in the next subroute*/}
                 <Link to="user-info" id="goToUserInfoButton" className="container"><button id="nextButton">Next</button></Link>
@@ -110,4 +87,4 @@ const BookingOptions = () =>{
         );
 }
 
-export default BookingOptions;
+export default ReservationForm;
