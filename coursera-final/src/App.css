@@ -578,6 +578,7 @@ section.aboutSection.container{
 #goToUserInfoButton{
   display: flex;
   justify-content: center;
+  margin-bottom: 20px;
 }
 
 /*----------------------End of MenuPage CSS-----------------------------*/
