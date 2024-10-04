@@ -583,6 +583,12 @@ section.aboutSection.container{
 
 /*----------------------End of MenuPage CSS-----------------------------*/
 
+/*----------------------Start of UserInfo CSS--------------------------*/
+.userInfoSection{
+  background-color: var(--brandGreen);
+}
+
+/*----------------------End of UserInfo CSS----------------------------*/
 
 
 /*---------------------End of Main CSS-------------------------- */
