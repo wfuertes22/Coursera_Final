@@ -391,7 +391,7 @@ q{
   border:0;
 }
 
-.reservationDate, .numOfDiners, .occasion, .time{
+.defaultInputBox{
   font-size: 18px;
   font-family: "Karla";
   font-weight: 600;

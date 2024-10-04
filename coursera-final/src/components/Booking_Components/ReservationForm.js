@@ -7,20 +7,19 @@ import {Link, Outlet} from "react-router-dom";
 const ReservationForm = () =>{
 
     const [formInputState, setFormInputState ]= useState({
-        reservationDate: 'reservationDate',
-        numOfDiners: "numOfDiners",
-        occasion: "occasion",
-        time: "time"
+        reservationDate: '',
+        numOfDiners: "",
+        occasion: "",
+        time: ""
     })
 
     const handleLayoutChange = (e) => {
-        if (e.target.value === "default"){
-            setFormInputState('reservationDate')
-        }
-        else{
-            setFormInputState('changedInputBox')
-        }
-    }
+        const { name, value } = e.target;
+        setFormInputState((prevState) => ({
+          ...prevState,
+          [name]: value !== 'default' ? value : '' // Reset to empty if default option is selected
+        }));
+    };
 
         return(
             <>
@@ -36,43 +35,66 @@ const ReservationForm = () =>{
                             </section>
                             <section className="gridBox">
                                 <label htmlFor="reservationDate" id="reservationTextLabel">Date of Reservation</label>
-                                <input type="date" className={formInputState.reservationDate} id="reservationDate" onChange={handleLayoutChange}/>
+                                <input
+                                    type="date"
+                                    name="reservationDate"
+
+                                    /* reservationDate and other input are initially empty. The ternary operator checks to see if it is empty or or not.
+                                        If the value is not empty meaning the user has chosen an option, then the className will be .changedInputBox.
+                                        If the value is empty(default. Check handleLayoutChange) then the className will be defaultInputBox*/
+                                    className={formInputState.reservationDate ? 'changedInputBox' : 'defaultInputBox'}
+                                    id="reservationDate"
+                                    value={formInputState.reservationDate}
+                                    onChange={handleLayoutChange}
+                                />
                             </section>
                             <section className="gridBox">
                                 <label htmlFor="numOfDiners" id="numOfDinersLabel">Number of Diners</label>
-                                <select className={formInputState.numOfDiners} id="numOfDiners" onChange={handleLayoutChange}>
-                                    <option value="default">No. of Diners</option>
-                                    <option value="1">1 Diner</option>
-                                    <option value="2">2 Diners</option>
-                                    <option value="3">3 Diners</option>
-                                    <option value="4">4 Diners</option>
-                                    <option value="5">5 Diners</option>
-                                    <option value="6">6 Diners</option>
-                                    <option value="7">7 Diners</option>
-                                    <option value="8">8 Diners</option>
-                                    <option value="9">9 Diners</option>
-                                    <option value="10">10 Diners</option>
+                                <select
+                                    className={formInputState.numOfDiners ? 'changedInputBox' : 'defaultInputBox'}
+                                    id="numOfDiners"
+                                    name="numOfDiners"
+                                    onChange={handleLayoutChange}>
+                                        <option value="default">No. of Diners</option>
+                                        <option value="1">1 Diner</option>
+                                        <option value="2">2 Diners</option>
+                                        <option value="3">3 Diners</option>
+                                        <option value="4">4 Diners</option>
+                                        <option value="5">5 Diners</option>
+                                        <option value="6">6 Diners</option>
+                                        <option value="7">7 Diners</option>
+                                        <option value="8">8 Diners</option>
+                                        <option value="9">9 Diners</option>
+                                        <option value="10">10 Diners</option>
                                 </select>
                             </section>
                             <section className="gridBox">
                                 <label htmlFor="occasion" id="occasionLabel">Occasion</label>
-                                <select className={formInputState.occasion} id="occasion" onChange={handleLayoutChange}>
-                                    <option value="default">Occasion</option>
-                                    <option value="Birthday">Birthday</option>
-                                    <option value="Engagement">Engagement</option>
-                                    <option value="Aniversary">Aniversary</option>
+                                <select
+                                    className={formInputState.occasion ? 'changedInputBox' : 'defaultInputBox'}
+                                    id="occasion"
+                                    name="occasion"
+                                    onChange={handleLayoutChange}>
+                                        <option value="default">Occasion</option>
+                                        <option value="Birthday">Birthday</option>
+                                        <option value="Engagement">Engagement</option>
+                                        <option value="Aniversary">Aniversary</option>
                                 </select>
                             </section>
                             <section className="gridBox">
                                 <label htmlFor="time" id="timeLabel">Time</label>
-                                <select className={formInputState.time}  id="time" onChange={handleLayoutChange}>
-                                    <option value="default">Select Time</option>
-                                    <option value="5:00 PM">5:00 PM</option>
-                                    <option value="6:00 PM">6:00 PM</option>
-                                    <option value="7:00 PM">7:00 PM</option>
-                                    <option value="8:00 PM">8:00 PM</option>
-                                    <option value="9:00 PM">9:00 PM</option>
-                                    <option value="10:00 PM">10:00 PM</option>
+                                <select
+                                    className={formInputState.time ? 'changedInputBox' : 'defaultInputBox'}
+                                    name="time"
+                                    id="time"
+                                    onChange={handleLayoutChange}>
+                                        <option value="default">Select Time</option>
+                                        <option value="5:00 PM">5:00 PM</option>
+                                        <option value="6:00 PM">6:00 PM</option>
+                                        <option value="7:00 PM">7:00 PM</option>
+                                        <option value="8:00 PM">8:00 PM</option>
+                                        <option value="9:00 PM">9:00 PM</option>
+                                        <option value="10:00 PM">10:00 PM</option>
                                 </select>
                             </section>
                         </section>

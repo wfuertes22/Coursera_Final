@@ -1,11 +1,19 @@
 import images from "../../images/images";
+import { useNavigate } from "react-router-dom";
 
 const Specials = ({specials}) => {
+    const navigate = useNavigate();
+
+
+    const goToOnlineMenu = () =>{
+        navigate('/menu')
+    }
+
     return(
         <section className="weeksSpecials container">
                 <div id="specialsHeader">
                     <h2 id="specialsTitle">This weeks specials</h2>
-                    <button id="onlineMenu">Online Menu</button>
+                    <button id="onlineMenu" onClick={goToOnlineMenu} >Online Menu</button>
                 </div>
                 <div className="slider">
                     <section id="productCardList">

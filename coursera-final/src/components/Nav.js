@@ -3,7 +3,7 @@
 TODO: Find out why the webpage does not work when Router is removed even though it is unused
 */
 
-import {BrowserRouter as Router, Routes, Link, Route } from "react-router-dom";
+import {Routes, Link, Route } from "react-router-dom";
 import Main from "./Main_Components/Main";
 import Booking from "./Booking_Components/Booking";
 import AboutPage from "./About_Component/AboutPage";
