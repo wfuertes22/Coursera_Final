@@ -1,7 +1,12 @@
+import { useLocation } from "react-router-dom";
+
 const BookingUserInfo = () => {
+    const location = useLocation();
+    const {fromReservationForm} = location.state;
+
     return(
         <section className="container">
-            <h1>BookingUserInfo Work In progress</h1>
+            <p>{fromReservationForm.time}</p>
         </section>
     );
 }

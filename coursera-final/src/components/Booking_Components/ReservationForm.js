@@ -7,7 +7,7 @@ import {Link, Outlet} from "react-router-dom";
 const ReservationForm = () =>{
 
     const [formInputState, setFormInputState ]= useState({
-        reservationDate: '',
+        reservationDate: "",
         numOfDiners: "",
         occasion: "",
         time: ""
@@ -54,6 +54,7 @@ const ReservationForm = () =>{
                                     className={formInputState.numOfDiners ? 'changedInputBox' : 'defaultInputBox'}
                                     id="numOfDiners"
                                     name="numOfDiners"
+                                    value={formInputState.numOfDiners}
                                     onChange={handleLayoutChange}>
                                         <option value="default">No. of Diners</option>
                                         <option value="1">1 Diner</option>
@@ -74,6 +75,7 @@ const ReservationForm = () =>{
                                     className={formInputState.occasion ? 'changedInputBox' : 'defaultInputBox'}
                                     id="occasion"
                                     name="occasion"
+                                    value={formInputState.occasion}
                                     onChange={handleLayoutChange}>
                                         <option value="default">Occasion</option>
                                         <option value="Birthday">Birthday</option>
@@ -87,6 +89,7 @@ const ReservationForm = () =>{
                                     className={formInputState.time ? 'changedInputBox' : 'defaultInputBox'}
                                     name="time"
                                     id="time"
+                                    value={formInputState.time}
                                     onChange={handleLayoutChange}>
                                         <option value="default">Select Time</option>
                                         <option value="5:00 PM">5:00 PM</option>
@@ -100,10 +103,9 @@ const ReservationForm = () =>{
                         </section>
                     </form>
                 </section>
-
                 <BookingImages />
                 {/*pass form data as props to display in the next subroute*/}
-                <Link to="user-info" id="goToUserInfoButton" className="container"><button id="nextButton">Next</button></Link>
+                <Link to="user-info" state={{fromReservationForm: formInputState}} id="goToUserInfoButton" className="container"><button type="submit" id="nextButton">Next</button></Link>
                 <Outlet />
             </>
         );
