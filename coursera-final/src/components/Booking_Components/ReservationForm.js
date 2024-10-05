@@ -21,6 +21,10 @@ const ReservationForm = () =>{
         }));
     };
 
+    function areFieldsFilled() {
+        return formInputState.reservationDate && formInputState.numOfDiners && formInputState.occasion && formInputState.time;
+    }
+
         return(
             <>
                 <section className="reservationContainer container">
@@ -38,7 +42,6 @@ const ReservationForm = () =>{
                                 <input
                                     type="date"
                                     name="reservationDate"
-
                                     /* reservationDate and other input are initially empty. The ternary operator checks to see if it is empty or or not.
                                         If the value is not empty meaning the user has chosen an option, then the className will be .changedInputBox.
                                         If the value is empty(default. Check handleLayoutChange) then the className will be defaultInputBox*/
@@ -105,7 +108,7 @@ const ReservationForm = () =>{
                 </section>
                 <BookingImages />
                 {/*pass form data as props to display in the next subroute*/}
-                <Link to="user-info" state={{fromReservationForm: formInputState}} id="goToUserInfoButton" className="container"><button type="submit" id="nextButton">Next</button></Link>
+                <Link to="user-info" state={{fromReservationForm: formInputState}} id="goToUserInfoButton" className="container"><button type="submit" id="nextButton" disabled={!areFieldsFilled()}>Next</button></Link>
                 <Outlet />
             </>
         );

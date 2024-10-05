@@ -135,6 +135,10 @@ button{
   cursor: pointer;
 }
 
+button:disabled{
+  cursor: default;
+}
+
 #reserveButton{
   margin-right: 35px;
 }
