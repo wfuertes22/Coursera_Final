@@ -592,6 +592,26 @@ section.aboutSection.container{
   background-color: var(--brandGreen);
 }
 
+#userInfoForm{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, min-content);
+  color:white;
+  padding: 20px 0;
+}
+
+#formData{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  color: white;
+  justify-items: center;
+}
+
+.labelAndInput label{
+  display: block;
+}
+
 /*----------------------End of UserInfo CSS----------------------------*/
 
 
