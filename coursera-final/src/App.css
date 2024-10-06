@@ -596,21 +596,54 @@ section.aboutSection.container{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, min-content);
-  color:white;
+  column-gap: 30px;
+  row-gap: 15px;
+  color:#d6d6d6;
   padding: 20px 0;
+  font-family: "Markazi Text";
 }
 
 #formData{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  color: white;
+  grid-template-rows: repeat(2, min-content);
+  color: #d8d8d8;
   justify-items: center;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+#formData img{
+  width: 25px;
+
 }
 
 .labelAndInput label{
   display: block;
+  padding-bottom: 3px;
+  font-size: 12px;
 }
+
+.labelAndInput input{
+  height: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.labelAndInput input, .labelAndInput textarea{
+  border-radius: 6px;
+  width: 100%;
+  background-color: white;
+  text-indent: 5px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #dddddd;
+}
+
+textarea{
+  height: 120px;
+}
+
 
 /*----------------------End of UserInfo CSS----------------------------*/
 

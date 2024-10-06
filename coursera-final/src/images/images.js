@@ -12,7 +12,8 @@ import mediterraneanBackdrop from "./mediterranean_backdrop.jpg";
 import marioAdrianB from "./Mario_and_Adrian_b.jpg";
 import marioAdrianA from "./Mario_and_Adrian_A.jpg";
 import grilledFish from "./grilled_fish.jpg";
-import pastaAllaPuttanesca from "./Penne_Puttanesca.jpg"
+import pastaAllaPuttanesca from "./Penne_Puttanesca.jpg";
+import calendar from "./calendar.png";
 
 const images = {
     restaurantIMG,
@@ -29,7 +30,8 @@ const images = {
     marioAdrianB,
     marioAdrianA,
     grilledFish,
-    pastaAllaPuttanesca
+    pastaAllaPuttanesca,
+    calendar,
 };
 
 export default images;
