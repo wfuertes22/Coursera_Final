@@ -14,6 +14,8 @@ import marioAdrianA from "./Mario_and_Adrian_A.jpg";
 import grilledFish from "./grilled_fish.jpg";
 import pastaAllaPuttanesca from "./Penne_Puttanesca.jpg";
 import calendar from "./calendar.png";
+import clock from "./clock.png";
+import wineGlass from "./wine-glasses.png"
 
 const images = {
     restaurantIMG,
@@ -32,6 +34,8 @@ const images = {
     grilledFish,
     pastaAllaPuttanesca,
     calendar,
+    clock,
+    wineGlass,
 };
 
 export default images;

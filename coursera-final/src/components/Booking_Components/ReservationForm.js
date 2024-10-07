@@ -10,7 +10,8 @@ const ReservationForm = () =>{
         reservationDate: "",
         numOfDiners: "",
         occasion: "",
-        time: ""
+        time: "",
+        seating: "", //has to be seating since the name for both the indoor and outdoor radio buttons have the same name
     })
 
     const handleLayoutChange = (e) => {
@@ -22,7 +23,7 @@ const ReservationForm = () =>{
     };
 
     function areFieldsFilled() {
-        return formInputState.reservationDate && formInputState.numOfDiners && formInputState.occasion && formInputState.time;
+        return formInputState.reservationDate && formInputState.numOfDiners && formInputState.occasion && formInputState.time && formInputState.seating;
     }
 
         return(
@@ -32,10 +33,28 @@ const ReservationForm = () =>{
                     <form>
                         <section className="reservationOptions">
                             <section className="gridBox">
-                                <label htmlFor="indoor">Indoor<input type="radio" id="indoor" name="seating"/></label>
+                                <label htmlFor="indoor">
+                                    Indoor
+                                    <input
+                                        type="radio"
+                                        id="indoor"
+                                        name="seating"
+                                        value="indoor"
+                                        onChange={handleLayoutChange}
+                                    />
+                                </label>
                             </section>
                             <section className="gridBox">
-                                <label htmlFor="outDoor">Outdoor<input type="radio" id="outDoor" name="seating"/></label>
+                                <label htmlFor="outdoor">
+                                    Outdoor
+                                    <input
+                                        type="radio"
+                                        id="outdoor"
+                                        name="seating"
+                                        value="outdoor"
+                                        onChange={handleLayoutChange}
+                                    />
+                                </label>
                             </section>
                             <section className="gridBox">
                                 <label htmlFor="reservationDate" id="reservationTextLabel">Date of Reservation</label>
