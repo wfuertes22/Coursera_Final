@@ -1,6 +1,6 @@
 import { useState } from "react";
 import BookingImages from "./BookingImages";
-import {Link, Outlet} from "react-router-dom";
+import {Link} from "react-router-dom";
 
 
 
@@ -127,8 +127,16 @@ const ReservationForm = () =>{
                 </section>
                 <BookingImages />
                 {/*pass form data as props to display in the next subroute*/}
-                <Link to="user-info" state={{fromReservationForm: formInputState}} id="goToUserInfoButton" className="container"><button type="submit" id="nextButton" disabled={!areFieldsFilled()}>Next</button></Link>
-                <Outlet />
+                <Link 
+                    to="user-info" 
+                    state={{fromReservationForm: formInputState}} 
+                    id="goToUserInfoButton" 
+                    className="container"
+                >
+                    <button type="submit" id="nextButton" disabled={!areFieldsFilled()}>
+                        Next
+                    </button>
+                </Link>
             </>
         );
 }
