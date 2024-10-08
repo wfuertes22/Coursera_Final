@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useLocation } from "react-router-dom";
 import BookingImages from "./BookingImages";
 import images from "../../images/images";
@@ -6,10 +7,20 @@ const BookingUserInfo = () => {
     const location = useLocation();
     const {fromReservationForm} = location.state;
 
+    const [userInputState, setUserInputState] = useState({
+        fName: "",
+        lName: "",
+        email: "",
+        phone: ""
+    })
+
     const showConfirmation = () =>{
         alert("Your Reservation has been confirmed. Please check your email")
     }
 
+    const userInfoFilled = () =>{
+        return 
+    }
 
     return(
         <>
@@ -96,7 +107,7 @@ const BookingUserInfo = () => {
             </section>
             <BookingImages />
             <section className="reserveButton container">
-                <button type="submit" onClick={showConfirmation}>Reserve</button>
+                <button type="submit" onClick={showConfirmation} disabled={!userInfoFilled}>Reserve</button>
             </section>
         </>
     );
