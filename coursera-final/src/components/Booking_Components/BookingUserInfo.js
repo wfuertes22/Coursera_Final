@@ -18,8 +18,12 @@ const BookingUserInfo = () => {
         alert("Your Reservation has been confirmed. Please check your email")
     }
 
-    const userInfoFilled = () =>{
-        return 
+    function userInfoFilled(){
+        return userInputState.fName && userInputState.lName && userInputState.email && userInputState.phone;
+    }
+
+    const handleInfoChange = (e) =>{
+        setUserInputState(e.target.value)
     }
 
     return(
@@ -33,6 +37,8 @@ const BookingUserInfo = () => {
                             id="fName"
                             placeholder="First Name"
                             autoComplete="First name"
+                            value = {userInputState.fName}
+                            onChange={handleInfoChange}
                         >
                         </input>
                     </section>
@@ -43,6 +49,8 @@ const BookingUserInfo = () => {
                             id="lName"
                             placeholder="Last Name"
                             autoComplete="Last name"
+                            value = {userInputState.lName}
+                            onChange={handleInfoChange}
                         >
                         </input>
                     </section>
@@ -54,6 +62,8 @@ const BookingUserInfo = () => {
                             id="email"
                             placeholder="you@company.com"
                             autoComplete="email"
+                            value = {userInputState.email}
+                            onChange={handleInfoChange}
                         >
                         </input>
                     </section>
@@ -67,6 +77,8 @@ const BookingUserInfo = () => {
                             placeholder="(123)456-7890"
                             pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                             autoComplete="phone"
+                            value={userInputState.phone}
+                            onChange={handleInfoChange}
                         >
                         </input>
                     </section>
@@ -107,7 +119,7 @@ const BookingUserInfo = () => {
             </section>
             <BookingImages />
             <section className="reserveButton container">
-                <button type="submit" onClick={showConfirmation} disabled={!userInfoFilled}>Reserve</button>
+                <button type="submit" onClick={showConfirmation} disabled={!userInfoFilled()}>Reserve</button>
             </section>
         </>
     );
