@@ -6,6 +6,15 @@ import {Link} from "react-router-dom";
 
 const ReservationForm = () =>{
 
+    const [availableTimes, setAvailableTimes] = useState([
+        "Select Time",
+        "5:00 PM",
+        "6:00 PM",
+        "7:00 PM",
+        "8:00 PM",
+        "9:00 PM",
+        "10:00 PM"])
+
     const [formInputState, setFormInputState ]= useState({
         reservationDate: "",
         numOfDiners: "",
@@ -112,14 +121,19 @@ const ReservationForm = () =>{
                                     name="time"
                                     id="time"
                                     value={formInputState.time}
-                                    onChange={handleLayoutChange}>
-                                        <option value="default">Select Time</option>
-                                        <option value="5:00 PM">5:00 PM</option>
-                                        <option value="6:00 PM">6:00 PM</option>
-                                        <option value="7:00 PM">7:00 PM</option>
-                                        <option value="8:00 PM">8:00 PM</option>
-                                        <option value="9:00 PM">9:00 PM</option>
-                                        <option value="10:00 PM">10:00 PM</option>
+                                    onChange={handleLayoutChange}
+                                >
+                                    {availableTimes.map((timeOption) => (
+                                        timeOption !== "Select Time" ? (
+                                            <option value={timeOption}>
+                                                {timeOption}
+                                            </option>
+                                        ) :(
+                                            <option value="default">
+                                                {timeOption}
+                                            </option>
+                                        )
+                                    ))}
                                 </select>
                             </section>
                         </section>
